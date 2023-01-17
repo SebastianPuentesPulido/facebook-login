@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --blue-sky: #166FE5;
+            --background: #F0F2F5;
+            --success-dark: #36A420;
+            --success:#42b72a;
+            --lg: 24px;
+            --sm: 14px;
+            --md: 17px;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            background-color: var(--background);
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            display: grid;
+            place-items: center;
+        }
+
+        .items {
+            width:100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about {
+            width: 400px;
+            height: 200px;
+            margin: 15px;
+            font-size: 24px;
+        }
+
+        .facebook-logo img {
+            width: 250px;
+            height: 50px;
+            margin: 0;
+        }
+
+        .legend {
+            font-size: var(--lg);
+        }
+
+        .card {
+            width:400px;
+            height:auto;
+            margin: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            background:white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .form-container {
+            margin: 10px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .email, .password {
+            margin: 4px;
+            width: 100%;
+            height:40px;
+            border:1px solid gray;
+            border-radius: 8px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .sign-in {
+            width: 100%;
+            height: 50px;
+            background: var(--blue-sky);
+            border:0;
+            font-size: var(--md);
+            border-radius: 8px;
+            font-weight:bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        .sign-in:hover {
+            background:#4267b2;
+        }
+
+        .recovery a {
+            text-decoration: none;
+            color: var(--blue-sky);
+        }
+
+        hr {
+            height:.5px;
+            width: 80%;
+            background-color: gray;
+        }
+
+
+        .more-info {
+            margin-top: 20px;
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height:10px;
+            font-size:14px;
+            text-align: center;
+        }
+
+        .more-info p a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+        .more-info p a:hover {
+            text-decoration: underline;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .primary {
+            width: 200px;
+            height: 50px;
+            background: var(--success);
+            border: 0;
+            margin:10px;
+            color: white;
+            font-weight: bold;
+            font-size: var(--md);
+            border-radius: 8px;
+        }
+
+        .primary:hover {
+            background:var(--success-dark);
+        }
+
+        @media (max-width:640px) {
+            .items {
+                display:flex;
+                flex-direction: column;
+            }
+            .container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .about {
+                width: 300px;
+                font-size: var(--sm);
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .about p {
+                display: none;
+            }
+
+            .facebook-logo img {
+            width: 250px;
+            height: 50px;
+            margin: 0;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items">
+            <div class="about">
+                <div class="facebook-logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmbD9uvPHZ3ea-yxYixIkOfkbzJyvml19AcQYuxbnVZFr1SvGG4_2D5BRvNVtM-V4zGw&usqp=CAU"
+                        alt="facebook">
+                </div>
+                <p class="legend">Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu
+                    vida.
+                </p>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="form-container">
+                        <form action="">
+                            <input class="email" type="text" placeholder="Correo electrónico o número de teléfono">
+                            <input class="password" type="password" placeholder="Contraseña">
+                            <input class="sign-in" type="submit" value="Iniciar sesion">
+                            <p class="recovery"><a href="/">¿Olvidaste tu contraseña?</a></p>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <button class="primary">Crear cuenta nueva</button>
+                    </div>
+                </div>
+                <div class="more-info">
+                    <p><span><a href="/">Crea una pagina</a> </span>para una celebridad, una marca o un negocio.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
